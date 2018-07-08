@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const port = 3000;
 const path = require('path');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -26,6 +25,8 @@ app.get('/', function (req, res) {
    res.sendFile(path.join(__dirname,'public', 'index.html'));
 });
 
+var port=process.env.PORT || 8080;
+app.set('port',port);
 app.listen(port, function(){
   console.log('Node js Express js Tutorial at port', port);
 });
