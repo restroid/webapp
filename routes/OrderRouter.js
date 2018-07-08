@@ -29,6 +29,9 @@ OrderRouter.route('/post').post(function (req, res) {
   order.save()
      .then(order => {
      res.redirect('/order');
+     })
+     .catch(err => {
+     res.status(400).send("unable to save to database");
      });
  });
 
