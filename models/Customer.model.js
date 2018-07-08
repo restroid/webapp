@@ -3,8 +3,8 @@
 const mongoose = require('mongoose');
 const Customer = new mongoose.Schema({
   name: String,
-    Address:String,
-  PhoneNumber:String
+  address:String,
+  phoneNumber:String
 },{
     collection: 'customers'
 });

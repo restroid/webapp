@@ -6,7 +6,7 @@ const Menu = new mongoose.Schema({
   name:  String,
   price: Number,
   section:String,
-  IsNonVeg:Boolean
+  isNonVeg:Boolean
   }
 ,{
     collection: 'menu'

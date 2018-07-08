@@ -3,21 +3,21 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const Menu = new Schema({
-  name: {
-    type: String
+const Order = new Schema({
+  customerId: String,
+  customerName: String,
+  //orderDate: Date,
+  isDelivered:{
+    type:Boolean,
+    default:false
   },
-  price: {
-     type: Number
-  },
-  section:{
-    type: String
-  },
-  IsNonVeg:{
-    type : Boolean
-  }
-},{
-    collection: 'menu'
+  orderItems: [new Schema({
+        menuItem:String,
+        quantity:Number,
+        })]
+}
+,{
+    collection: 'orders'
 });
 
-module.exports = mongoose.model('Menu', Menu);
+module.exports = mongoose.model('Order',Order);
