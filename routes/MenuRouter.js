@@ -3,17 +3,6 @@ const app = express();
 const MenuRouter = express.Router();
 const Menu = require('../models/Menu.model');
 
-MenuRouter.route('api/menu').get(function (req, res) {
-  Menu.find(function (err, menus){
-     if(err){
-      res.status(400).send( err);
-     }
-     else {
-       res.status(200).send(menus);
-     }
-   });
-});
-
 MenuRouter.route('/').get(function (req, res) {
    Menu.find(function (err, menus){
       if(err){

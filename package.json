@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "deploy":"gcloud preview app deploy"
+    "deploy": "gcloud app deploy"
   },
   "author": "Ritesh Kumar",
   "license": "ISC",
@@ -13,8 +13,7 @@
     "@google-cloud/storage": "^1.7.0",
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
-    "express": "^4.16.2",
-    "mongoose": "^5.2.1",
-    "nodemon": "^1.17.5"
+    "express": "^4.16.3",
+    "mongoose": "^5.2.1"
   }
 }
