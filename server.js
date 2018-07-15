@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-const ApiRouter = require('./routes/apiRouter');
+const ApiRouter = require('./routes/ApiRouter');
 const MenuRouter = require('./routes/MenuRouter');
 const CustomerRouter = require('./routes/CustomerRouter');
 const OrderRouter = require('./routes/OrderRouter');
