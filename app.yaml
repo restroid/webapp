@@ -1,8 +1,12 @@
-#[START app_yaml]
-runtime: nodejs
-env: flex
+runtime: nodejs8
+api_version: '1.0'
+env: standard
+instance_class: B1
 manual_scaling:
   instances: 1
+handlers:
+  - url: '.*'
+    script: auto
 resources:
   cpu: 1
   memory_gb: 0.5
