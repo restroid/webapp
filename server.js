@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb+srv://scott:tiger@test1-xa5jy.gcp.mongodb.net/test?retryWrites=true');
+mongoose.connect('mongodb://scott:tiger@35.243.199.209:27017');
 //mongoose.connect("mongodb://127.0.0.1:27017")
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
