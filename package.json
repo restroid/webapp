@@ -4,8 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "deploy": "gcloud app deploy"
+    "start": "forever start server.js",
+    "stop": "forever stop server.js"
   },
   "author": "Ritesh Kumar",
   "license": "ISC",
@@ -13,6 +13,7 @@
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
+    "forever": "^0.15.3",
     "mongoose": "^5.2.1"
   }
 }
